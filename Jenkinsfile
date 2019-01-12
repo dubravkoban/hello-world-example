@@ -3,7 +3,7 @@ pipeline {
     node {
       label 'master'
     }
-    
+
   }
   stages {
     stage('Build') {
@@ -11,7 +11,8 @@ pipeline {
         withMaven(maven: 'M3') {
           sh 'mvn clean install'
         }
-        
+
+        echo 'Hello'
       }
     }
     stage('Results') {
